@@ -106,15 +106,15 @@
               <td id="celEmail">Larry</td>
             </tr>
             <tr>
-              <td>Identificación Tributaria:</td>
+              <td>Código Postal:</td>
               <td id="celIde">Larry</td>
             </tr>
             <tr>
-              <td>Nombre Fiscal:</td>
+              <td>Barrio:</td>
               <td id="celNomFiscal">Larry</td>
             </tr>
             <tr>
-              <td>Dirección Fiscal:</td>
+              <td>Dirección:</td>
               <td id="celDirFiscal">Larry</td>
             </tr>
             <tr>

@@ -39,7 +39,7 @@
           <a href="<?= base_url() ?>/productos" class="linkw">
             <div class="widget-small warning coloured-icon"><i class="icon fa fa fa-archive fa-3x"></i>
               <div class="info">
-                <h4>Productos</h4>
+                <h4>Cajas NAP</h4>
                 <p><b><?= $data['productos'] ?></b></p>
               </div>
             </div>
@@ -48,10 +48,10 @@
         <?php } ?>
         <?php if(!empty($_SESSION['permisos'][5]['r'])){ ?>
         <div class="col-md-6 col-lg-3">
-          <a href="<?= base_url() ?>/pedidos" class="linkw">
-            <div class="widget-small danger coloured-icon"><i class="icon fa fa-shopping-cart fa-3x"></i>
-              <div class="info">
-                <h4>Pedidos</h4>
+          <a href="<?= base_url() ?>/categorias" class="linkw">
+            <div class="widget-small danger coloured-icon"><i class="icon fa fa-map-marker fa-3x"></i>
+               <div class="info">
+                <h4>Mapa</h4>
                 <p><b><?= $data['pedidos'] ?></b></p>
               </div>
             </div>
@@ -63,7 +63,7 @@
         <?php if(!empty($_SESSION['permisos'][5]['r'])){ ?>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Últimos Pedidos</h3>
+            <h3 class="tile-title">Últimas Cajas NAP</h3>
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
@@ -88,54 +88,13 @@
                 </tr>
                 <?php } 
                   } ?>
-
               </tbody>
             </table>
           </div>
         </div>
         <?php } ?>
-
-        <div class="col-md-6">
-          <div class="tile">
-            <div class="container-title">
-              <h3 class="tile-title">Tipo de pagos por mes</h3>
-              <div class="dflex">
-                <input class="date-picker pagoMes" name="pagoMes" placeholder="Mes y Año">
-                <button type="button" class="btnTipoVentaMes btn btn-info btn-sm" onclick="fntSearchPagos()"> <i class="fas fa-search"></i> </button>
-              </div>
-            </div>
-            <div id="pagosMesAnio"></div>
-          </div>
-        </div>
       </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="tile">
-            <div class="container-title">
-              <h3 class="tile-title">Ventas por mes</h3>
-              <div class="dflex">
-                <input class="date-picker ventasMes" name="ventasMes" placeholder="Mes y Año">
-                <button type="button" class="btnVentasMes btn btn-info btn-sm" onclick="fntSearchVMes()"> <i class="fas fa-search"></i> </button>
-              </div>
-            </div>
-            <div id="graficaMes"></div>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="tile">
-            <div class="container-title">
-              <h3 class="tile-title">Ventas por año</h3>
-              <div class="dflex">
-                <input class="ventasAnio" name="ventasAnio" placeholder="Año" minlength="4" maxlength="4" onkeypress="return controlTag(event);">
-                <button type="button" class="btnVentasAnio btn btn-info btn-sm" onclick="fntSearchVAnio()"> <i class="fas fa-search"></i> </button>
-              </div>
-            </div>
-            <div id="graficaAnio"></div>
-          </div>
-        </div>
-      </div>
-
+      
     </main>
 <?php footerAdmin($data); ?>
 
