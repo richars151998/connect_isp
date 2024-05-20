@@ -37,24 +37,23 @@
                   <input type="email" class="form-control valid validEmail" id="txtEmail" name="txtEmail" required="">
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="txtPassword">Password </label>
+                  <label for="txtPassword">Contraseña </label>
                   <input type="password" class="form-control" id="txtPassword" name="txtPassword" >
                 </div>
               </div>
-              <hr>
-              <p class="text-primary">Datos Fiscales.</p>
+                           
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label>Identificación Tributaria <span class="required">*</span></label>
+                  <label>Código Postal <span class="required">*</span></label>
                   <input class="form-control" type="text" id="txtNit" name="txtNit" required="">
                 </div>
                 <div class="form-group col-md-6">
-                  <label>Nombre fiscal <span class="required">*</span></label>
+                  <label>Barrio <span class="required">*</span></label>
                   <input class="form-control" type="text" id="txtNombreFiscal" name="txtNombreFiscal" required="">
                 </div>
 
                 <div class="form-group col-md-12">
-                  <label>Dirección fiscal <span class="required">*</span></label>
+                  <label>Dirección <span class="required">*</span></label>
                   <input class="form-control" type="text" id="txtDirFiscal" name="txtDirFiscal" required="">
                 </div>
                 
