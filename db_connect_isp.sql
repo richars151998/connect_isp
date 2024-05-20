@@ -354,7 +354,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   `codigo` varchar(30) COLLATE utf8mb4_swedish_ci NOT NULL,
   `nombre` varchar(255) COLLATE utf8mb4_swedish_ci NOT NULL,
   `descripcion` text COLLATE utf8mb4_swedish_ci NOT NULL,
-  `precio` decimal(11,2) NOT NULL,
+  `precio` varchar(100) NOT NULL,
   `stock` int(11) NOT NULL,
   `imagen` varchar(100) COLLATE utf8mb4_swedish_ci DEFAULT NULL,
   `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -5,7 +5,7 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-            <h1><i class="fas fa-box-tissue"></i> <?= $data['page_title'] ?>
+            <h1><i class="fa fa-map-marker"></i> <?= $data['page_title'] ?>
               <?php if($_SESSION['permisosMod']['w']){ ?>
                 <button class="btn btn-primary" type="button" onclick="openModal();" ><i class="fas fa-plus-circle"></i> Nuevo</button>
               <?php } ?> 

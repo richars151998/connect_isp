@@ -117,7 +117,7 @@ window.addEventListener('load', function() {
                             rowTable.cells[1].textContent = intCodigo;
                             rowTable.cells[2].textContent = strNombre;
                             rowTable.cells[3].textContent = intStock;
-                            rowTable.cells[4].textContent = smony+strPrecio;
+                            rowTable.cells[4].textContent = strPrecio;
                             rowTable.cells[5].innerHTML =  htmlStatus;
                             rowTable = ""; 
                         }
@@ -298,7 +298,7 @@ function fntViewInfo(idProducto){
 
 function fntEditInfo(element,idProducto){
     rowTable = element.parentNode.parentNode.parentNode;
-    document.querySelector('#titleModal').innerHTML ="Actualizar Producto";
+    document.querySelector('#titleModal').innerHTML ="Actualizar Caja NAP";
     document.querySelector('.modal-header').classList.replace("headerRegister", "headerUpdate");
     document.querySelector('#btnActionForm').classList.replace("btn-primary", "btn-info");
     document.querySelector('#btnText').innerHTML ="Actualizar";
@@ -353,8 +353,8 @@ function fntEditInfo(element,idProducto){
 
 function fntDelInfo(idProducto){
     swal({
-        title: "Eliminar Producto",
-        text: "¿Realmente quiere eliminar el producto?",
+        title: "Eliminar Caja NAP",
+        text: "¿Realmente quiere eliminar la caja NAP?",
         type: "warning",
         showCancelButton: true,
         confirmButtonText: "Si, eliminar!",
@@ -429,7 +429,7 @@ function openModal()
     document.querySelector('.modal-header').classList.replace("headerUpdate", "headerRegister");
     document.querySelector('#btnActionForm').classList.replace("btn-info", "btn-primary");
     document.querySelector('#btnText').innerHTML ="Guardar";
-    document.querySelector('#titleModal').innerHTML = "Nuevo Producto";
+    document.querySelector('#titleModal').innerHTML = "Nueva Caja NAP";
     document.querySelector("#formProductos").reset();
     document.querySelector("#divBarCode").classList.add("notblock");
     document.querySelector("#containerGallery").classList.add("notblock");

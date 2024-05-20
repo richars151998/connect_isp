@@ -18,7 +18,7 @@
 				header("Location:".base_url().'/dashboard');
 			}
 			$data['page_tag'] = "Productos";
-			$data['page_title'] = "PRODUCTOS <small> Connectisp</small>";
+			$data['page_title'] = "CAJAS NAP <small> Connectisp</small>";
 			$data['page_name'] = "productos";
 			$data['page_functions_js'] = "functions_productos.js";
 			$this->views->getView($this,"productos",$data);
@@ -42,13 +42,13 @@
 
 					$arrData[$i]['precio'] = SMONEY.' '.formatMoney($arrData[$i]['precio']);
 					if($_SESSION['permisosMod']['r']){
-						$btnView = '<button class="btn btn-info btn-sm" onClick="fntViewInfo('.$arrData[$i]['idproducto'].')" title="Ver producto"><i class="far fa-eye"></i></button>';
+						$btnView = '<button class="btn btn-info btn-sm" onClick="fntViewInfo('.$arrData[$i]['idproducto'].')" title="Ver caja NAP"><i class="far fa-eye"></i></button>';
 					}
 					if($_SESSION['permisosMod']['u']){
-						$btnEdit = '<button class="btn btn-primary  btn-sm" onClick="fntEditInfo(this,'.$arrData[$i]['idproducto'].')" title="Editar producto"><i class="fas fa-pencil-alt"></i></button>';
+						$btnEdit = '<button class="btn btn-primary  btn-sm" onClick="fntEditInfo(this,'.$arrData[$i]['idproducto'].')" title="Editar caja NAP"><i class="fas fa-pencil-alt"></i></button>';
 					}
 					if($_SESSION['permisosMod']['d']){	
-						$btnDelete = '<button class="btn btn-danger btn-sm" onClick="fntDelInfo('.$arrData[$i]['idproducto'].')" title="Eliminar producto"><i class="far fa-trash-alt"></i></button>';
+						$btnDelete = '<button class="btn btn-danger btn-sm" onClick="fntDelInfo('.$arrData[$i]['idproducto'].')" title="Eliminar caja NAP"><i class="far fa-trash-alt"></i></button>';
 					}
 					$arrData[$i]['options'] = '<div class="text-center">'.$btnView.' '.$btnEdit.' '.$btnDelete.'</div>';
 				}
@@ -112,7 +112,7 @@
 							$arrResponse = array('status' => true, 'idproducto' => $idProducto, 'msg' => 'Datos Actualizados correctamente.');
 						}
 					}else if($request_producto == 'exist'){
-						$arrResponse = array('status' => false, 'msg' => '¡Atención! ya existe un producto con el Código Ingresado.');		
+						$arrResponse = array('status' => false, 'msg' => '¡Atención! ya existe una caja NAP con el Código Ingresado.');		
 					}else{
 						$arrResponse = array("status" => false, "msg" => 'No es posible almacenar los datos.');
 					}
@@ -195,9 +195,9 @@
 					$requestDelete = $this->model->deleteProducto($intIdproducto);
 					if($requestDelete)
 					{
-						$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado el producto');
+						$arrResponse = array('status' => true, 'msg' => 'Se ha eliminado la caja NAP.');
 					}else{
-						$arrResponse = array('status' => false, 'msg' => 'Error al eliminar el producto.');
+						$arrResponse = array('status' => false, 'msg' => 'Error al eliminar la caja NAP.');
 					}
 					echo json_encode($arrResponse,JSON_UNESCAPED_UNICODE);
 				}

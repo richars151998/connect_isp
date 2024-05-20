@@ -52,7 +52,6 @@
             <div class="widget-small danger coloured-icon"><i class="icon fa fa-map-marker fa-3x"></i>
                <div class="info">
                 <h4>Mapa</h4>
-                <p><b><?= $data['pedidos'] ?></b></p>
               </div>
             </div>
           </a>

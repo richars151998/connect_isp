@@ -7,8 +7,8 @@
 		private $strDescripcion;
 		private $intCodigo;
 		private $intCategoriaId;
-		private $intPrecio;
-		private $intStock;
+		private $strPrecio;
+		private $strStock;
 		private $intStatus;
 		private $strRuta;
 		private $strImagen;
@@ -36,13 +36,13 @@
 			return $request;
 		}	
 
-		public function insertProducto(string $nombre, string $descripcion, int $codigo, int $categoriaid, string $precio, int $stock, string $ruta, int $status){
+		public function insertProducto(string $nombre, string $descripcion, int $codigo, int $categoriaid, string $precio, string $stock, string $ruta, int $status){
 			$this->strNombre = $nombre;
 			$this->strDescripcion = $descripcion;
 			$this->intCodigo = $codigo;
 			$this->intCategoriaId = $categoriaid;
 			$this->strPrecio = $precio;
-			$this->intStock = $stock;
+			$this->strStock = $stock;
 			$this->strRuta = $ruta;
 			$this->intStatus = $status;
 			$return = 0;
@@ -64,7 +64,7 @@
         						$this->strNombre,
         						$this->strDescripcion,
         						$this->strPrecio,
-        						$this->intStock,
+        						$this->strStock,
         						$this->strRuta,
         						$this->intStatus);
 	        	$request_insert = $this->insert($query_insert,$arrData);
@@ -75,14 +75,14 @@
 	        return $return;
 		}
 
-		public function updateProducto(int $idproducto, string $nombre, string $descripcion, int $codigo, int $categoriaid, string $precio, int $stock, string $ruta, int $status){
+		public function updateProducto(int $idproducto, string $nombre, string $descripcion, int $codigo, int $categoriaid, string $precio, string $stock, string $ruta, int $status){
 			$this->intIdProducto = $idproducto;
 			$this->strNombre = $nombre;
 			$this->strDescripcion = $descripcion;
 			$this->intCodigo = $codigo;
 			$this->intCategoriaId = $categoriaid;
 			$this->strPrecio = $precio;
-			$this->intStock = $stock;
+			$this->strStock = $stock;
 			$this->strRuta = $ruta;
 			$this->intStatus = $status;
 			$return = 0;
@@ -105,7 +105,7 @@
         						$this->strNombre,
         						$this->strDescripcion,
         						$this->strPrecio,
-        						$this->intStock,
+        						$this->strStock,
         						$this->strRuta,
         						$this->intStatus);
 
