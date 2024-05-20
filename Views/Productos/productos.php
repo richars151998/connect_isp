@@ -27,8 +27,8 @@
                           <th>ID</th>
                           <th>Código</th>
                           <th>Nombre</th>
-                          <th>Puertos</th>
                           <th>Dirección</th>
+                          <th>Puertos</th>
                           <th>Estado</th>
                           <th>Acciones</th>
                         </tr>

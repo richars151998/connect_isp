@@ -40,7 +40,7 @@
 						$arrData[$i]['status'] = '<span class="badge badge-danger">Inactivo</span>';
 					}
 
-					$arrData[$i]['precio'] = SMONEY.' '.formatMoney($arrData[$i]['precio']);
+					
 					if($_SESSION['permisosMod']['r']){
 						$btnView = '<button class="btn btn-info btn-sm" onClick="fntViewInfo('.$arrData[$i]['idproducto'].')" title="Ver caja NAP"><i class="far fa-eye"></i></button>';
 					}
@@ -59,7 +59,7 @@
 
 		public function setProducto(){
 			if($_POST){
-				if(empty($_POST['txtNombre']) || empty($_POST['txtCodigo']) || empty($_POST['listCategoria']) || empty($_POST['txtPrecio']) || empty($_POST['listStatus']) )
+				if(empty($_POST['txtNombre']) || empty($_POST['txtCodigo']) || empty($_POST['listCategoria']) || empty($_POST['txtPrecio']) || empty($_POST['txtStock']) || empty($_POST['listStatus']) )
 				{
 					$arrResponse = array("status" => false, "msg" => 'Datos incorrectos.');
 				}else{
@@ -70,7 +70,7 @@
 					$strCodigo = strClean($_POST['txtCodigo']);
 					$intCategoriaId = intval($_POST['listCategoria']);
 					$strPrecio = strClean($_POST['txtPrecio']);
-					$intStock = intval($_POST['txtStock']);
+					$strStock = strClean($_POST['txtStock']);
 					$intStatus = intval($_POST['listStatus']);
 					$request_producto = "";
 
@@ -86,7 +86,7 @@
 																		$strCodigo, 
 																		$intCategoriaId,
 																		$strPrecio, 
-																		$intStock, 
+																		$strStock, 
 																		$ruta,
 																		$intStatus );
 						}
@@ -99,7 +99,7 @@
 																		$strCodigo, 
 																		$intCategoriaId,
 																		$strPrecio, 
-																		$intStock, 
+																		$strStock, 
 																		$ruta,
 																		$intStatus);
 						}

@@ -27,7 +27,7 @@ tableProductos = $('#tableProductos').dataTable( {
     ],
     "columnDefs": [
                     { 'className': "textcenter", "targets": [ 3 ] },
-                    { 'className': "textright", "targets": [ 4 ] },
+                    { 'className': "textcenter", "targets": [ 4 ] },
                     { 'className': "textcenter", "targets": [ 5 ] }
                   ],       
     'dom': 'lBfrtip',
@@ -79,9 +79,9 @@ window.addEventListener('load', function() {
             let strNombre = document.querySelector('#txtNombre').value;
             let intCodigo = document.querySelector('#txtCodigo').value;
             let strPrecio = document.querySelector('#txtPrecio').value;
-            let intStock = document.querySelector('#txtStock').value;
+            let strStock = document.querySelector('#txtStock').value;
             let intStatus = document.querySelector('#listStatus').value;
-            if(strNombre == '' || intCodigo == '' || strPrecio == '' || intStock == '' )
+            if(strNombre == '' || intCodigo == '' || strPrecio == '' || strStock == '' )
             {
                 swal("Atención", "Todos los campos son obligatorios." , "error");
                 return false;
@@ -116,7 +116,7 @@ window.addEventListener('load', function() {
                             '<span class="badge badge-danger">Inactivo</span>';
                             rowTable.cells[1].textContent = intCodigo;
                             rowTable.cells[2].textContent = strNombre;
-                            rowTable.cells[3].textContent = intStock;
+                            rowTable.cells[3].textContent = strStock;
                             rowTable.cells[4].textContent = strPrecio;
                             rowTable.cells[5].innerHTML =  htmlStatus;
                             rowTable = ""; 

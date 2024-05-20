@@ -38,11 +38,11 @@
                     </div>
                     <div class="row">
                     <div class="form-group col-md-6">
-                            <label class="control-label">Numero de puertos <span class="required">*</span></label>
+                            <label class="control-label">Dirección <span class="required">*</span></label>
                             <input class="form-control" id="txtStock" name="txtStock" type="text" required="">
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label">Dirección <span class="required">*</span></label>
+                            <label class="control-label">Número de puertos <span class="required">*</span></label>
                             <input class="form-control" id="txtPrecio" name="txtPrecio" type="text" required="">
                         </div>
                     </div>
@@ -131,11 +131,11 @@
               <td id="celNombre"></td>
             </tr>
             <tr>
-              <td>Dirección</td>
+              <td>Número de Puertos:</td>
               <td id="celPrecio"></td>
             </tr>
             <tr>
-              <td>Número de Puertos:</td>
+              <td>Dirección:</td>
               <td id="celStock"></td>
             </tr>
             <tr>
